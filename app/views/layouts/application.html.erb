@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HashBack</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to("Please Log In!","/login") if session[:user_id].nil? %></li>
+        <li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
+        <li><%= link_to "Home", "#" %></li>
+        <li><%= link_to "Log In","#" %></li>
+        <li><%= link_to "Sign Up","#" %></li>
+        <li><%= link_to "Share A Story","#" %></li>
+        <li><%= link_to "Most Loved","#" %></li>
+        <li><%= link_to "Needs Love","#" %></li>
+        <li><%= link_to "Featured","#" %></li>
+      </ul>
+    </nav>
+  </header>
+
+  <%= yield %>
+
+<!-- <h5>Session:</h5>
+<%= debug session.to_hash %>
+<br/> -->
+
+</body>
+</html>
