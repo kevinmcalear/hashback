@@ -1,6 +1,6 @@
 <h1>HashBack</h1>
 <h3>#hashtags that give back</h3>
 <div class="user_panel">
-  <p><%= link_to "Join", new_user_path %></p>
-  <p><%= link_to "Login", "/login" %></p>
+  <p><%= link_to "Join", new_user_path if session[:user_id].nil?  %></p>
+  <p><%= link_to "Login", "/login" if session[:user_id].nil?  %></p>
 </div>
