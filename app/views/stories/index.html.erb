@@ -1,7 +1,7 @@
 <h1>Story Index</h1>
 
 <% @stories.each do |story| %>
-  <a href="<%= %>"><img src="<%= story.photo_url %>" width="300px"/></a><br/>
+  <a href="<%= story_path(story) %>"><img src="<%= story.photo_url %>" width="300px"/></a><br/>
 
   <h3>HashBack Tag:</h3>
   <p>#<%= story.hashtag %></p>
@@ -15,4 +15,4 @@
 <% end %>
 
 <br/>
-<%= link_to "Add New story", new_user_story_path(@user) %>
+<%= link_to "Add New story", new_story_path(@story) %>

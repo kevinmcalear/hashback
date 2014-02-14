@@ -1,26 +1,22 @@
-<h1><%= @story.name %></h1>
+<h1>#<%= @story.hashtag %></h1>
 <img src="<%= @story.photo_url %>" width="300px"/>
-<p>Genre: <%= @story.genre %></p>
-<h2>Songs:</h2>
+<p>The Story: <%= @story.the_story %></p>
+<h1>Most Recent Instagram Pic</h1>
+<!-- <img src="<%= @pics %>" width="300px"/> -->
+
+
+
 <ul>
-<% @songs.each do |song| %>
-  <li><%= song.title %>, 
-      <%= song.year %> 
-      <audio controls>
-        <source src="<%= song.preview_url %>">
-      </audio>
-      <br/>
-      <a href="/stories/<%= @story.id %>/songs/<%= song.id %>/edit">Edit</a>
-      
-       <%= form_tag story_song_path(@story, song), method: "delete" do %>
-        <%= submit_tag("Delete") %>
-      <% end %>
-  </li>
+<% @pics.each do |pic| %>
+
+  <img src="<%= pic %>" width="300px"/>
+  <br/>
 <% end %>
 </ul>
 
+
 <br/>
-<a href="/stories/<%= @story.id %>/songs/new">Add Song</a>
+<a href="/stories/new">Add A Story</a>
 
 <br/>
 <a href="/stories">Stories Home</a>

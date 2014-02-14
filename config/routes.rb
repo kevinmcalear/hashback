@@ -1,8 +1,8 @@
 Hashback::Application.routes.draw do
   
-  resources :users, except: [:index] do
+  resources :users, except: [:index] 
   resources :stories
-end
+
   get "/login", to: "session#new"
   post "/session", to: "session#create"
   delete "/session", to: "session#destroy"

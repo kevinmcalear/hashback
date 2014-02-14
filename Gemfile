@@ -38,6 +38,9 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # Use HTTPary.get('your_url') to use this
 gem 'httparty'
 
+# Use Rails_12factor to push projects to Heroku
+gem 'rails_12factor', group: :production
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
