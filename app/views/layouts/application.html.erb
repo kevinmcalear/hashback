@@ -8,8 +8,9 @@
 </head>
 <body>
 
-  <header>
-    <nav>
+   <div id="pattern" class="pattern">
+    <a href="#menu" class="menu-link">Menu</a>
+    <nav id="menu" role="navigation">
       <ul>
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "My Account", user_path(session[:user_id]) unless session[:user_id].nil? %></li>
@@ -21,7 +22,7 @@
         <li><%= link_to "Featured","#" %></li> -->
       </ul>
     </nav>
-  </header>
+  </div>
 
   <%= yield %>
 
