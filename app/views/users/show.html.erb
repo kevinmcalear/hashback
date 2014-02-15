@@ -1,5 +1,6 @@
 <h2>Welcome <%= @user.first_name %>!</h2>
-
+<p><img src="<%= @user.profile_picture_url %>"/></p>
+<p><%= @instagram["bio"] %></p>
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 
 

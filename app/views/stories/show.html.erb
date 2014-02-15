@@ -1,4 +1,5 @@
 <h1>#<%= @story.hashtag %></h1>
+<p><%= @tag_count %></p>
 <img src="<%= @story.photo_url %>" width="300px"/>
 <p>The Story: <%= @story.the_story %></p>
 <h1>Most Recent Instagram Pic</h1>
@@ -7,13 +8,16 @@
 
 
 <ul>
-<% @pics.each do |pic| %>
 
+<div id="pattern" class="pattern">
+  <ul class="insta_story_grid">
+<% @pics.each do |pic| %>
+  <li>
   <img src="<%= pic %>" width="300px"/>
-  <br/>
+  </li>
 <% end %>
 </ul>
-
+</div>
 
 <br/>
 <a href="/stories/new">Add A Story</a>

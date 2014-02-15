@@ -11,3 +11,285 @@
  *= require_self
  *= require_tree .
  */
+
+/************Reset**************/
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+html, body, div, object, iframe, fieldset { 
+  margin: 0; 
+  padding: 0; 
+  border: 0;
+} 
+ol, ul { 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} 
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0; 
+}
+header, footer, nav, section, article, hgroup, figure {
+  display: block; 
+}
+legend {
+  display: none;
+}
+/************End Reset**************/
+
+/************Global**************/
+body {
+  background: #fff;
+  color: #000;
+  font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+a {
+  color: #808080;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #e51837;
+}
+p {
+  margin: 0 0 1em;
+}
+img, object, video {
+  max-width: 100%;
+  border: 0;
+}
+a img {
+  border: 0;
+  outline: 0;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+h3 {
+  font-weight: normal;
+  line-height: 1.1;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #ccc;
+}
+h1 a, h2 a, h3 a {
+  display: block;
+  color: #000;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: #e51837;
+}
+blockquote {
+  border-left: 0.5em solid #ddd;
+  padding-left: 1em;
+  margin-left: 1em;
+}
+small {
+  color: #e51837;
+}
+
+input, textarea {
+  border: 1px solid #000;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+::-webkit-input-placeholder {
+  color: #808080;
+}
+:-moz-placeholder {  
+    color: #808080;
+}
+/************End Global**************/
+
+
+
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px 15%;
+}
+form header {
+  margin: 0 0 20px 0; 
+}
+form header div {
+  font-size: 90%;
+  color: #999;
+}
+form header h2 {
+  margin: 0 0 5px 0;
+}
+form > div {
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
+}
+form > div > fieldset > div > div {
+  margin: 0 0 5px 0;
+}
+form > div > label,
+legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
+}
+form > div > fieldset label {
+  font-size: 90%;
+}
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password] {
+  width: 50%;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #4697e4;
+}
+
+@media (max-width: 600px) {
+  form > div {
+    margin: 0 0 15px 0; 
+  }
+  form > div > label,
+  legend {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  form > div > div,
+  form > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=url],
+  input[type=password],
+  textarea,
+  select {
+    width: 100%; 
+  }
+}
+@media (min-width: 1200px) {
+  form > div > label,
+  legend {
+    text-align: right;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.insta_story_grid {
+      padding: 0.25em;
+      overflow: hidden;
+    }
+    .insta_story_grid li {
+      float: left;
+      width: 50%;
+      padding: 0.25em;
+    }
+    .insta_story_grid img {
+      display: block;
+    }
+    .insta_story_grid li:nth-child(odd) {
+      clear: left;
+    }
+  
+    @media screen and (min-width: 40em) {
+      .insta_story_grid li {
+          width: 33.3333333333333333%; 
+        }
+        .insta_story_grid li:nth-child(3n+1) {
+          clear: left;
+        }
+        .insta_story_grid li:nth-child(odd) {
+        clear: none;
+      }
+    }
+    @media screen and (min-width: 55em) {
+      .insta_story_grid li {
+          width: 25%; 
+        }
+        .insta_story_grid li:nth-child(4n+1) {
+          clear: left;
+        }
+        .insta_story_grid li:nth-child(3n+1) {
+        clear: none;
+      }
+    }
+    @media screen and (min-width: 72em) {
+      .insta_story_grid li {
+          width: 20%; 
+        }
+        .insta_story_grid li:nth-child(5n+1) {
+          clear: left;
+        }
+        .insta_story_grid li:nth-child(4n+1) {
+        clear: none;
+      }
+    }
+    @media screen and (min-width: 90em) {
+      .insta_story_grid li {
+          width: 16.666666666%; 
+        }
+        .insta_story_grid li:nth-child(6n+1) {
+          clear: left;
+        }
+        .insta_story_grid li:nth-child(5n+1) {
+        clear: none;
+      }
+    }

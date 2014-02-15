@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @stories = @user.stories.all
+    @instagram = instagram_info(@user.instagram_username)
   end
 
   def edit
@@ -49,12 +50,14 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    # return {
-    #   email: params[:user][:email],
-    #   first_name: params[:user][:first_name]
-    # }
 
     params.require(:user).permit(:email, :first_name, :last_name, :dob, :instagram_username, :profile_picture_url, :phone_number, :password, :password_confirmation)
+  end
+
+  def instagram_info(user_name)
+    profile = HTTParty.get( "https://api.instagram.com/v1/users/search?q=#{user_name}&client_id=8a67c3b89c51484ea8f6ac75de2bdc01")
+    profile_info = profile["data"][0]
+    return profile_info
   end
 
 end

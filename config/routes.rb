@@ -1,6 +1,6 @@
 Hashback::Application.routes.draw do
   
-  resources :users, except: [:index] 
+  resources :users, except: [:index], shallow: true 
   resources :stories
 
   get "/login", to: "session#new"

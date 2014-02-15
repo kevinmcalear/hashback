@@ -1,15 +1,24 @@
 <h1>Story Index</h1>
 
+<div id="pattern" class="pattern">
+    <ul class="insta_story_grid">
+      
 <% @stories.each do |story| %>
-  <a href="<%= story_path(story) %>"><img src="<%= story.photo_url %>" width="300px"/></a><br/>
 
-  <h3>HashBack Tag:</h3>
-  <p>#<%= story.hashtag %></p>
+<li>
+  <a href="<%= story_path(story) %>"><img src="<%= story.photo_url %>" width="300px"/></a></li>
+
+  
+  <% end %>
+
+  </ul>
+  </div>
+  <!-- <h3>HashBack Tag:</h3>
+  <p>#<%= @stories.first.hashtag %></p>
   <%= link_to "Edit", "" %>
   
   <%= form_tag "", method: "delete" do %>
-    <%= submit_tag("Delete") %>
-  <% end %>
+    <%= submit_tag("Delete") %> -->
   <br/><br/>
 
 <% end %>
