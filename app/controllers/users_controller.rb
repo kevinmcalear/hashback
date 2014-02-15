@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @stories = @user.stories.all
   end
 
   def edit

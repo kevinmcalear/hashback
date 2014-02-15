@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  # before_action(:load_user)
+  before_action(:load_user)
   before_action(:load_story, { only: [:show, :edit, :update, :destroy] })
 
   def index
@@ -47,9 +47,9 @@ class StoriesController < ApplicationController
 
   private
 
-  # def load_user
-  #   return @user = User.find(session[:user_id])
-  # end
+  def load_user
+    return @user = User.find(session[:user_id])
+  end
 
   def load_story
     return @story = Story.find(params[:id])

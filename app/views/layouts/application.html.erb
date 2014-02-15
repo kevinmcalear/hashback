@@ -13,7 +13,7 @@
       <ul>
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "My Account", user_path(session[:user_id]) unless session[:user_id].nil? %></li>
-        <li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
+        <li><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
         <li><%= link_to "Share A Story", new_story_path unless session[:user_id].nil? %></li>
         <li><%= link_to "See Stories", stories_path %></li>
         <!-- <li><%= link_to "Most Loved","#" %></li>

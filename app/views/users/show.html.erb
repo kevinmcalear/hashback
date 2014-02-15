@@ -2,6 +2,26 @@
 
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 
+
+
+
+<h1>My Stories</h1>
+
+<% @stories.each do |story| %>
+  <a href="<%= story_path(story) %>"><img src="<%= story.photo_url %>" width="300px"/></a><br/>
+
+  <h3>HashBack Tag:</h3>
+  <p>#<%= story.hashtag %></p>
+  <%= link_to "Edit", edit_story_path(story) %>
+  
+  <%= form_tag "", method: "delete" do %>
+    <%= submit_tag("Delete") %>
+  <% end %>
+  <br/><br/>
+
+<% end %>
+
+
 <%= form_tag user_path(@user), method: "delete" do %>
   <%= submit_tag("Delete My Account") %>
 <% end %>
