@@ -12,9 +12,9 @@
  *= require_tree .
  */
 
-*= require reset
-*= require layout
-*= require chrome
+require reset
+require layout
+require chrome
 /************Reset**************/
 * { 
   -moz-box-sizing: border-box; 
