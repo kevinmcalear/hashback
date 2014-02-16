@@ -1,2 +1,5 @@
 <%= link_to "Go Back", user_path(@user) %>
 <%= render "form" %>
+ <p><%= form_tag story_path(@story), method: "delete" do %>
+            <%= submit_tag("Delete") %>
+            <% end %></p>

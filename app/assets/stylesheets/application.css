@@ -15,33 +15,6 @@
 require reset
 require layout
 require chrome
-/************Reset**************/
-* { 
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box; 
-}
-html, body, div, object, iframe, fieldset { 
-  margin: 0; 
-  padding: 0; 
-  border: 0;
-} 
-ol, ul { 
-  list-style: none;
-  margin: 0;
-  padding: 0;
-} 
-table { 
-  border-collapse: collapse; 
-  border-spacing: 0; 
-}
-header, footer, nav, section, article, hgroup, figure {
-  display: block; 
-}
-legend {
-  display: none;
-}
-/************End Reset**************/
 
 /************Global**************/
 body {
@@ -278,7 +251,7 @@ a.menu-link {
       
       nav[role=navigation]  li {
         display: inline-block;
-        margin: 0 0.25em;
+        margin: 1.25em;
       }
       nav[role=navigation] li a {
         border: 0;
@@ -506,3 +479,10 @@ width: 180px;
 }
 
 
+#hashtag {
+  color: #fff;
+}
+
+.main-text {
+  background: #000;
+}

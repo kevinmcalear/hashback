@@ -19,10 +19,7 @@
           <div class="li-text">
             <h4 class="li-head">#<%= story.hashtag %></h4>
             <p class="li-sub"><%= story.the_story %></p>
-            <p><%= link_to "Edit", edit_story_path(story) %>
-            <%= form_tag "", method: "delete" do %>
-            <%= submit_tag("Delete") %>
-            <% end %></p>
+            <p><%= link_to "Edit", edit_story_path(story) %></p>
           </div>
         </a>
       </li>
