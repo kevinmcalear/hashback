@@ -14,7 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+//= require classie
+//= require modernizr.min
+//= require photostack
 
 // A little baby amount of JQuery for menu magic
 $(document).ready(function() {
