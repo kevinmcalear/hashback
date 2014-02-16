@@ -28,7 +28,7 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
     # binding.pry
     @pics = instagram_tag(@story.hashtag)
-    @tag_count = instagram_tag_stat(@story.hashtag)
+    @tag_count = instagram_tag_stat(@story.hashtag).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     @pics_info = instagram_photos(@story.hashtag)
 
   end
