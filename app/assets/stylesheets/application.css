@@ -15,10 +15,6 @@
  *= require_demo
  */
 
-require reset
-require layout
-require chrome
-
 /************Global**************/
 body {
   background: #fff;
