@@ -2,7 +2,67 @@
       <section id="photostack" class="photostack photostack-start">
         <div>
           <figure>
-            
+            <a href="/stories/<%= @stories.first.id%>" class="photostack-img"><img src="<%= @stories.first.photo_url %>" alt="img01"/></a>
+            <figcaption>
+              <h2 class="photostack-title">#<%= @stories.first.hashtag %></h2>
+              <div class="photostack-back">
+                <p><%= @stories.first.the_story %></p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="/stories/<%= @stories.find(2).id%>" class="photostack-img"><img src="<%= @stories.find(2).photo_url %>" alt="img01"/></a>
+            <figcaption>
+              <h2 class="photostack-title">#<%= @stories.find(2).hashtag %></h2>
+              <div class="photostack-back">
+                <p><%= @stories.find(2).the_story %></p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="/stories/<%= @stories.find(3).id%>" class="photostack-img"><img src="<%= @stories.find(3).photo_url %>" alt="img01"/></a>
+            <figcaption>
+              <h2 class="photostack-title">#<%= @stories.find(3).hashtag %></h2>
+              <div class="photostack-back">
+                <p><%= @stories.find(3).the_story %></p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="/stories/<%= @stories.find(4).id%>" class="photostack-img"><img src="<%= @stories.find(4).photo_url %>" alt="img01"/></a>
+            <figcaption>
+              <h2 class="photostack-title">#<%= @stories.find(4).hashtag %></h2>
+              <div class="photostack-back">
+                <p><%= @stories.find(4).the_story %></p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="/stories/<%= @stories.find(5).id%>" class="photostack-img"><img src="<%= @stories.find(5).photo_url %>" alt="img01"/></a>
+            <figcaption>
+              <h2 class="photostack-title">#<%= @stories.find(5).hashtag %></h2>
+              <div class="photostack-back">
+                <p><%= @stories.find(5).the_story %></p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="/stories/<%= @stories.find(6).id%>" class="photostack-img"><img src="<%= @stories.find(6).photo_url %>" alt="img01"/></a>
+            <figcaption>
+              <h2 class="photostack-title">#<%= @stories.find(6).hashtag %></h2>
+              <div class="photostack-back">
+                <p><%= @stories.find(6).the_story %></p>
+          </figure>
+          <figure data-dummy>
+            <a href="/stories/<%= @stories.find(7).id%>" class="photostack-img"><img src="<%= @stories.find(7).photo_url %>" alt="img01"/></a>
+            <figcaption>
+              <h2 class="photostack-title">#<%= @stories.find(7).hashtag %></h2>
+              <div class="photostack-back">
+                <p><%= @stories.find(7).the_story %></p>
+          </figure>
+          <figure data-dummy>
+            <a href="#" class="photostack-img"><img src="http://distilleryimage3.ak.instagram.com/fffaf6d822d811e3ba2d22000a1f97cd_7.jpg" alt="img08"/></a>
+            <figcaption>
+              <h2 class="photostack-title">Wonderful</h2>
+              <div class="photostack-back">
+                <p>What might be right for you may not be right for some. And we know Flipper lives in a world full of wonder flying there-under under the sea.</p>
+            </figcaption>
+          </figure>
           <figure data-dummy>
             <a href="#" class="photostack-img"><img src="http://distilleryimage4.ak.instagram.com/2dcabdd623d911e39dfb22000a9e5ac6_7.jpg" alt="img09"/></a>
             <figcaption>

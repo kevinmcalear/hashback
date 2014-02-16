@@ -21,7 +21,7 @@
         
         <li><%= link_to "Share A Story", new_story_path unless session[:user_id].nil? %></li>
         <li><%= link_to "See Stories", stories_path unless session[:user_id].nil? %></li>
-        <li><%= link_to("Log Out #{current_user.first_name}!", "/session", method: "delete") unless session[:user_id].nil? %></li>
+        <li><%= link_to("Log Out", "/session", method: "delete") unless session[:user_id].nil? %></li>
       </ul>
       <!-- <a href="#nav" class="nav-toggle">Menu</a> -->
     </nav>
