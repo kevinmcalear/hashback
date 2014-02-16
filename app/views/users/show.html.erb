@@ -7,22 +7,34 @@
 
 
 <h1>My Stories</h1>
+<div id="pattern" class="pattern">
+    <ul class="list img-list">
 
 <% @stories.each do |story| %>
-  <a href="<%= story_path(story) %>"><img src="<%= story.photo_url %>" width="300px"/></a><br/>
+  <li>
+        <a href="<%= story_path(story) %>" class="inner">
+          <div class="li-img">
+            <img src="<%= story.photo_url %>" alt="Image Alt Text" />
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">#<%= story.hashtag %></h4>
+            <p class="li-sub"><%= story.the_story %></p>
+            <p><%= link_to "Edit", edit_story_path(story) %>
+            <%= form_tag "", method: "delete" do %>
+            <%= submit_tag("Delete") %>
+            <% end %></p>
+          </div>
+        </a>
+      </li>
 
-  <h3>HashBack Tag:</h3>
-  <p>#<%= story.hashtag %></p>
-  <%= link_to "Edit", edit_story_path(story) %>
-  
-  <%= form_tag "", method: "delete" do %>
-    <%= submit_tag("Delete") %>
-  <% end %>
-  <br/><br/>
+
+
 
 <% end %>
-
+ </ul>
+  </div>
 
 <%= form_tag user_path(@user), method: "delete" do %>
   <%= submit_tag("Delete My Account") %>
 <% end %>
+

@@ -118,6 +118,115 @@ input[type=search] {
 
 
 
+
+/* Header */
+.header {
+  margin: auto 0;
+  overflow: hidden;
+  background: #;
+  text-transform: lowercase;
+  position: relative; }
+  .header a {
+    text-decoration: none;
+    color: #466472;
+    display: block;
+    padding: 0.8em; }
+    @media all and (min-width: 47em) {
+      .header a {
+        /* Usage @include transition(max-height,0.5s,ease-out); */
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -ms-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        padding: 0.8em 0.5em; } }
+  .header a:hover, .header a:focus {
+    color: #B0E6FF; }
+  @media all and (min-width: 47em) {
+    .header {
+      background: #;
+      line-height: 1;
+      padding: 0 0.5em; } }
+  @media all and (min-width: 81em) {
+    .header {
+      padding: 0 1.5em; } }
+
+
+
+
+.nav {
+  overflow: hidden;
+  background: #110000;
+  text-transform: lowercase;
+  /* Medium & Up*/ }
+  .nav a {
+    text-decoration: none;
+    color: #466472;
+    display: block;
+    padding: 0.8em; }
+  .nav li:nth-of-type(1) a {
+    background: rgba(255, 255, 255, 0.15); }
+  .nav li:nth-of-type(2) a {
+    background: rgba(255, 255, 255, 0.12); }
+  .nav li:nth-of-type(3) a {
+    background: rgba(255, 255, 255, 0.09); }
+  .nav li:nth-of-type(4) a {
+    background: rgba(255, 255, 255, 0.06); }
+  .nav li:nth-of-type(5) a {
+    background: rgba(255, 255, 255, 0.03); }
+  .nav li a:hover, .nav li a:focus, .nav li a:active {
+    background: #; }
+  .nav .top {
+    display: none; }
+  @media all and (min-width: 47em) {
+    .nav {
+      background: none;
+      margin: 0;
+      clear: none;
+      max-height: none;
+      float: right; }
+      .nav li {
+        display: inline-block; }
+      .nav li a {
+        background: none !important;
+        padding: 0.8em 0.5em; } }
+
+/* Nav Small Screen Functionality: http:/netmagazine.com/tutorials/build-smart-mobile-navigation-without-hacks */
+@media all and (max-width: 47em) {
+  #nav {
+    max-height: 0;
+    /* Usage @include transition(max-height,0.5s,ease-out); */
+    -webkit-transition: max-height 0.4s ease-out;
+    -moz-transition: max-height 0.4s ease-out;
+    -ms-transition: max-height 0.4s ease-out;
+    -o-transition: max-height 0.4s ease-out;
+    transition: max-height 0.4s ease-out; }
+    #nav:target {
+      /* Nav open */
+      max-height: 25em; }
+      #nav:target .top {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 5em;
+        background: none;
+        text-indent: -99999em; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*The Menu */
 
 a.menu-link {
@@ -150,6 +259,7 @@ a.menu-link {
       padding: 0.8em;
       border-bottom: 1px solid #808080;
     }
+
     
     @media screen and (min-width: 48.25em) {
       a.menu-link {
@@ -173,18 +283,78 @@ a.menu-link {
     }
 
 
+.logo {
+font-weight: normal;
+margin: 0;
+padding: 0;
+font-size: 1em;
+line-height: inherit;
+position: relative;
+z-index: 1;
+float: left;
+height: 70px;
+width: 180px;
+}
 
 
 
+/* Leaderboard */
+.leaderboard {
+  display: block;
+  background: #777888;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 4em 1em;
+  /* Usage @include transition(max-height,0.5s,ease-out); */
+  -webkit-transition: padding 0.3s ease-out;
+  -moz-transition: padding 0.3s ease-out;
+  -ms-transition: padding 0.3s ease-out;
+  -o-transition: padding 0.3s ease-out;
+  transition: padding 0.3s ease-out; }
+  .leaderboard h1, .leaderboard h2 {
+    font-size: 1.8em;
+    color: #B0E6FF;
+    margin: 0;
+    border: 0;
+    position: relative;
+    /* Usage @include transition(max-height,0.5s,ease-out); */
+    -webkit-transition: font-size 0.3s ease-out;
+    -moz-transition: font-size 0.3s ease-out;
+    -ms-transition: font-size 0.3s ease-out;
+    -o-transition: font-size 0.3s ease-out;
+    transition: font-size 0.3s ease-out; }
+  .leaderboard a {
+    color: #B0E6FF; }
+    .leaderboard a:hover, .leaderboard a:focus, .leaderboard a .icon {
+      color: #cdcaa2; }
+  @media all and (min-width: 47em) and (min-height: 28em) {
+    .leaderboard {
+      padding: 6em 1em; }
+      .leaderboard h1, .leaderboard h2 {
+        font-size: 4em; } }
+  @media all and (min-width: 81em) and (min-height: 28em) {
+    .leaderboard {
+      padding: 6em 2em; }
+      .leaderboard h1, .leaderboard h2 {
+        font-size: 4em; } }
+  @media all and (min-width: 66em) and (min-height: 28em) {
+    .leaderboard h1, .leaderboard h2 {
+      font-size: 5em; } }
+  @media all and (min-width: 81em) and (min-height: 38em) {
+    .leaderboard {
+      padding: 8em 2em; }
+      .leaderboard h1, .leaderboard h2 {
+        font-size: 6.5em; } }
 
 
 
-
-
-
-
-
-
+.post-time {
+  color: #dedcb9;
+  font-size: 85%;
+  opacity: 0.5;
+  display: block;
+  margin: 1em 0 0; }
 
 
 
@@ -255,3 +425,81 @@ a.menu-link {
         clear: none;
       }
     }
+
+
+
+
+.login_form {
+  text-align: center;
+}
+
+
+
+.list li {
+  border-bottom: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 40%;
+  padding-right: 1em;
+}
+.li-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 60%;
+}
+.li-head {
+  margin: 0;
+}
+.li-sub {
+  margin: 0;
+}
+
+@media all and (min-width: 40em) {
+  .list {
+    padding: 0.5em;
+    max-width: 70em;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .list li {
+    padding: 0.5em;
+    display: block;
+    width: 50%;
+    float: left;
+    background: none;
+    border: 0;
+  }
+  .inner {
+    display: block;
+  }
+  .li-img, .li-text, .inner {
+    display: block;
+    width: auto;
+    padding: 0;
+  }
+  .li-text {
+    padding: 0.5em 0;
+  }
+}
+
+@media all and (min-width: 60em) {
+  .list li {
+    width: 33.33333333%;
+  }
+}
+
+
