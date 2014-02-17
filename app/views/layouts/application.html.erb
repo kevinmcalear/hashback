@@ -14,16 +14,14 @@
    <div id="pattern" class="pattern nav">
     <a href="#menu" class="menu-link nav">Menu</a>
     <nav id="menu" class="nav" role="navigation">
-      <ul class="nav" id="nav">
+      <ul>
         <li><%= link_to "Join", new_user_path if session[:user_id].nil?  %></li>
         <li><%= link_to "Login", "/login" if session[:user_id].nil?  %></li>
         <li><%= link_to "My Account", user_path(session[:user_id]) unless session[:user_id].nil? %></li>
-        
         <li><%= link_to "Share A Story", new_story_path unless session[:user_id].nil? %></li>
         <li><%= link_to "See Stories", stories_path unless session[:user_id].nil? %></li>
         <li><%= link_to("Log Out", "/session", method: "delete") unless session[:user_id].nil? %></li>
       </ul>
-      <!-- <a href="#nav" class="nav-toggle">Menu</a> -->
     </nav>
     </div>
     <h1 class="logo"><a href="/"><img src="http://hashback.org/wp-content/uploads/logo_rf.png" alt="HashBack.org"></a></h1>
