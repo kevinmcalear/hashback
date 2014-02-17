@@ -15,14 +15,10 @@
  *= require_demo
  */
 
-
-require reset
-require layout
-require chrome
-
 /************Global**************/
+
 body {
-  background: #fff;
+  background: #f3f3f3;
   color: #000;
   font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   padding: 0;
@@ -101,6 +97,7 @@ input[type=search] {
 
 /* Header */
 .header {
+  background: #fff;
   margin: auto 0;
   overflow: hidden;
   background: #;
@@ -278,71 +275,6 @@ width: 180px;
 
 
 
-/* Leaderboard */
-.leaderboard {
-  display: block;
-  background: #777888;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  padding: 4em 1em;
-  /* Usage @include transition(max-height,0.5s,ease-out); */
-  -webkit-transition: padding 0.3s ease-out;
-  -moz-transition: padding 0.3s ease-out;
-  -ms-transition: padding 0.3s ease-out;
-  -o-transition: padding 0.3s ease-out;
-  transition: padding 0.3s ease-out; }
-  .leaderboard h1, .leaderboard h2 {
-    font-size: 1.8em;
-    color: #B0E6FF;
-    margin: 0;
-    border: 0;
-    position: relative;
-    /* Usage @include transition(max-height,0.5s,ease-out); */
-    -webkit-transition: font-size 0.3s ease-out;
-    -moz-transition: font-size 0.3s ease-out;
-    -ms-transition: font-size 0.3s ease-out;
-    -o-transition: font-size 0.3s ease-out;
-    transition: font-size 0.3s ease-out; }
-  .leaderboard a {
-    color: #B0E6FF; }
-    .leaderboard a:hover, .leaderboard a:focus, .leaderboard a .icon {
-      color: #cdcaa2; }
-  @media all and (min-width: 47em) and (min-height: 28em) {
-    .leaderboard {
-      padding: 6em 1em; }
-      .leaderboard h1, .leaderboard h2 {
-        font-size: 4em; } }
-  @media all and (min-width: 81em) and (min-height: 28em) {
-    .leaderboard {
-      padding: 6em 2em; }
-      .leaderboard h1, .leaderboard h2 {
-        font-size: 4em; } }
-  @media all and (min-width: 66em) and (min-height: 28em) {
-    .leaderboard h1, .leaderboard h2 {
-      font-size: 5em; } }
-  @media all and (min-width: 81em) and (min-height: 38em) {
-    .leaderboard {
-      padding: 8em 2em; }
-      .leaderboard h1, .leaderboard h2 {
-        font-size: 6.5em; } }
-
-
-
-.post-time {
-  color: #dedcb9;
-  font-size: 85%;
-  opacity: 0.5;
-  display: block;
-  margin: 1em 0 0; }
-
-
-
-
-
-
-
-
 /*The Responsive Picture Grids*/
 
 .insta_story_grid {
@@ -409,7 +341,7 @@ width: 180px;
 
 
 
-.login_form {
+.login_form, .center_align {
   text-align: center;
 }
 
@@ -490,13 +422,36 @@ width: 180px;
 .main-text {
   background: #000;
 }
+
+
+/*GROUPING */
+
+.col-group > div {
+  padding: 1em 1em 0;
+}
+
+@media screen and (min-width: 50em) {
+  .col-group {
+    overflow: hidden;
+  }
+  .col-group > div {
+    float: left;
+    width: 33.3333333%;
+  }
+}
+
+
+ul, li{
+    list-style:none;
+    list-style-type:none;
+}
 @font-face {
-	font-family: 'icons';
-	src:url('fonts/icons/icons.eot');
-	src:url('fonts/icons/icons.eot?#iefix') format('embedded-opentype'),
-		url('fonts/icons/icons.woff') format('woff'),
-		url('fonts/icons/icons.ttf') format('truetype'),
-		url('fonts/icons/icons.svg#icons') format('svg');
+	font-family: "icons";
+	src:url("fonts/icons/icons.eot");
+	src:url("fonts/icons/icons.eot?#iefix") format("embedded-opentype"),
+		url("fonts/icons/icons.woff") format("woff"),
+		url("fonts/icons/icons.ttf") format("truetype"),
+		url("fonts/icons/icons.svg#icons") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -802,22 +757,21 @@ figure.photostack-current::after {
 @font-face {
 	font-weight: normal;
 	font-style: normal;
-	font-family: 'codropsicons';
-	src:url('fonts/codropsicons/codropsicons.eot');
-	src:url('fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-		url('fonts/codropsicons/codropsicons.woff') format('woff'),
-		url('fonts/codropsicons/codropsicons.ttf') format('truetype'),
-		url('fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-family: "codropsicons";
+	src:url("fonts/codropsicons/codropsicons.eot");
+	src:url("fonts/codropsicons/codropsicons.eot?#iefix") format("embedded-opentype"),
+		url("fonts/codropsicons/codropsicons.woff") format("woff"),
+		url("fonts/codropsicons/codropsicons.ttf") format("truetype"),
+		url("fonts/codropsicons/codropsicons.svg#codropsicons") format("svg");
 }
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 body {
-	background: #fff;
 	color: #a7a0a2;
 	font-weight: 400;
 	font-size: 1em;
-	font-family: 'Lato', Arial, sans-serif;
+	font-family: "Lato", Arial, sans-serif;
 }
 
 .clearfix:before,
