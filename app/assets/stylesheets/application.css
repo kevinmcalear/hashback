@@ -17,30 +17,6 @@
 
 /************Global**************/
 
-@font-face {
-  font-family: "icons";
-  src:url("assets/icons.eot");
-  src:url("assets/icons.eot?#iefix") format("embedded-opentype"),
-    url("assets/icons.woff") format("woff"),
-    url("assets/icons.ttf") format("truetype"),
-    url("assets/icons.svg#icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700|Give+You+Glory);
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: "codropsicons";
-  src:url("assets/codropsicons.eot");
-  src:url("assets/codropsicons.eot?#iefix") format("embedded-opentype"),
-    url("assets/codropsicons.woff") format("woff"),
-    url("assets/codropsicons.ttf") format("truetype"),
-    url("assets/codropsicons.svg#codropsicons") format("svg");
-}
-
-
 body {
   background: #f3f3f3;
   color: #000;
@@ -468,4 +444,26 @@ width: 180px;
 ul, li{
     list-style:none;
     list-style-type:none;
+}
+
+.photostack nav span::after {
+  content: "\e600";
+  font-family: 'icons';
+  font-size: 80%;
+  speak: none;
+  display: inline-block;
+  vertical-align: top;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 30px;
+  color: #fff;
+  opacity: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
