@@ -17,7 +17,7 @@
 
 /************Global**************/
 body {
-  background: #ddd;
+  background: #f3f3f3;
   color: #000;
   font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   padding: 0;
@@ -340,7 +340,7 @@ width: 180px;
 
 
 
-.login_form {
+.login_form, .center_align {
   text-align: center;
 }
 
@@ -437,4 +437,10 @@ width: 180px;
     float: left;
     width: 33.3333333%;
   }
+}
+
+
+ul, li{
+    list-style:none;
+    list-style-type:none;
 }

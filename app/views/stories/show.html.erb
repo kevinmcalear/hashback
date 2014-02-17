@@ -1,6 +1,4 @@
-<a href="/stories/new">Add A Story</a>
-<br/>
-<a href="/stories">Stories Home</a>
+<div class="center_align"</div>
 <section class="description">
 <div id="pattern" class="pattern">
   <div class="col-group">
@@ -9,15 +7,13 @@
 <p><img src="<%= @story.photo_url %>" width="300px"/></p></div>
 <div><p><strong>The Story</strong></p>
 <p><%= @story.the_story %></p></div>
-<p>This story has been told <strong><%= @tag_count %></strong> times.</p>
+<div><p><strong>The Love</strong></p>
+<p>This story has been told <strong><%= @tag_count %></strong> times.</p></div>
 </div>
 </div>
 </section>
  
-
-<p><strong>Most Recent Instagram Pics</strong></p>
-
-
+<h1>Most Recent Instagram Pics</h1>
 
 <ul>
 
@@ -25,8 +21,13 @@
   <ul class="insta_story_grid">
 <% @pics_info.each do |pic| %>
   <li>
-  <img src="<%= pic["images"]["standard_resolution"]["url"] %>" width="300px"/>
+  <a href="<%= pic["link"]%>" target="_blank"><img src="<%= pic["images"]["standard_resolution"]["url"] %>" width="300px"/></a>
+  <a href="http://instagram.com/<%= pic["user"]["username"]%>" target="_blank"><p>@<%= pic["user"]["username"]%></p></a>
+  <p><%= pic["likes"]["count"]%></p>
+  <p><%= truncate(pic["caption"]["text"], :length => 80)  unless pic["caption"].nil? %></p>
+  
   </li>
 <% end %>
 </ul>
+</div>
 </div>

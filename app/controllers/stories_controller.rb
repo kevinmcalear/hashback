@@ -42,6 +42,7 @@ class StoriesController < ApplicationController
   end
 
   def destroy
+    @story = Story.find(params[:id])
     @story.destroy
     redirect_to stories_path
   end
@@ -80,8 +81,6 @@ class StoriesController < ApplicationController
   def instagram_tag_stat(tag)
     tag_stats = HTTParty.get("https://api.instagram.com/v1/tags/search?q=#{tag}&client_id=8a67c3b89c51484ea8f6ac75de2bdc01")
     tag_count = tag_stats["data"][0]["media_count"]
-    
     return tag_count
-
   end
 end
