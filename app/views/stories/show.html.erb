@@ -2,15 +2,19 @@
 <br/>
 <a href="/stories">Stories Home</a>
 <section class="description">
+<div id="pattern" class="pattern">
+  <div class="col-group">
 <div><p><strong>The Hashtag</strong></p>
 <p>#<%= @story.hashtag %></p>
 <p><img src="<%= @story.photo_url %>" width="300px"/></p></div>
 <div><p><strong>The Story</strong></p>
 <p><%= @story.the_story %></p></div>
 <p>This story has been told <strong><%= @tag_count %></strong> times.</p>
+</div>
+</div>
 </section>
  
- 
+
 <p><strong>Most Recent Instagram Pics</strong></p>
 
 
@@ -26,5 +30,3 @@
 <% end %>
 </ul>
 </div>
-
-

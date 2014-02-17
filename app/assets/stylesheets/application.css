@@ -17,7 +17,7 @@
 
 /************Global**************/
 body {
-  background: #777;
+  background: #ddd;
   color: #000;
   font: 100%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   padding: 0;
@@ -96,6 +96,7 @@ input[type=search] {
 
 /* Header */
 .header {
+  background: #fff;
   margin: auto 0;
   overflow: hidden;
   background: #;
@@ -273,71 +274,6 @@ width: 180px;
 
 
 
-/* Leaderboard */
-.leaderboard {
-  display: block;
-  background: #777888;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  padding: 4em 1em;
-  /* Usage @include transition(max-height,0.5s,ease-out); */
-  -webkit-transition: padding 0.3s ease-out;
-  -moz-transition: padding 0.3s ease-out;
-  -ms-transition: padding 0.3s ease-out;
-  -o-transition: padding 0.3s ease-out;
-  transition: padding 0.3s ease-out; }
-  .leaderboard h1, .leaderboard h2 {
-    font-size: 1.8em;
-    color: #B0E6FF;
-    margin: 0;
-    border: 0;
-    position: relative;
-    /* Usage @include transition(max-height,0.5s,ease-out); */
-    -webkit-transition: font-size 0.3s ease-out;
-    -moz-transition: font-size 0.3s ease-out;
-    -ms-transition: font-size 0.3s ease-out;
-    -o-transition: font-size 0.3s ease-out;
-    transition: font-size 0.3s ease-out; }
-  .leaderboard a {
-    color: #B0E6FF; }
-    .leaderboard a:hover, .leaderboard a:focus, .leaderboard a .icon {
-      color: #cdcaa2; }
-  @media all and (min-width: 47em) and (min-height: 28em) {
-    .leaderboard {
-      padding: 6em 1em; }
-      .leaderboard h1, .leaderboard h2 {
-        font-size: 4em; } }
-  @media all and (min-width: 81em) and (min-height: 28em) {
-    .leaderboard {
-      padding: 6em 2em; }
-      .leaderboard h1, .leaderboard h2 {
-        font-size: 4em; } }
-  @media all and (min-width: 66em) and (min-height: 28em) {
-    .leaderboard h1, .leaderboard h2 {
-      font-size: 5em; } }
-  @media all and (min-width: 81em) and (min-height: 38em) {
-    .leaderboard {
-      padding: 8em 2em; }
-      .leaderboard h1, .leaderboard h2 {
-        font-size: 6.5em; } }
-
-
-
-.post-time {
-  color: #dedcb9;
-  font-size: 85%;
-  opacity: 0.5;
-  display: block;
-  margin: 1em 0 0; }
-
-
-
-
-
-
-
-
 /*The Responsive Picture Grids*/
 
 .insta_story_grid {
@@ -486,3 +422,19 @@ width: 180px;
   background: #000;
 }
 
+
+/*GROUPING */
+
+.col-group > div {
+  padding: 1em 1em 0;
+}
+
+@media screen and (min-width: 50em) {
+  .col-group {
+    overflow: hidden;
+  }
+  .col-group > div {
+    float: left;
+    width: 33.3333333%;
+  }
+}
