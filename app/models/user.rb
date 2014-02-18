@@ -4,6 +4,5 @@ class User < ActiveRecord::Base
   validates :last_name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :instagram_username, presence: true
-  validates :profile_picture_url, presence: true
  has_secure_password
 end

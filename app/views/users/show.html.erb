@@ -1,16 +1,27 @@
 <div id="pattern" class="pattern">
-  <div class="two-col-group">
+  <div class="two-col-group profile">
 
     <div>
-      <h2>Welcome <%= @user.first_name %>!</h2>
-      <p><img src="<%= @user.profile_picture_url %>" width="300px;"/></p>
+    <div class="profile-box">
+      <h1><%= @user.first_name %>'s Hashbacks</h1>
+      
+      <div class="two-col-group">
+        <div>
+      <p><img src="<%= @instagram["profile_picture"] %>" width="200px;"/></p>
+      <p><a href="http://instagram.com/<%= @instagram["username"] %>" target="_blank">@<%= @instagram["username"] %></a></p>
+    </div>
+    <div>
+      <h2><strong>About</strong></h2>
+      <br>
       <p><%= @instagram["bio"] %></p>
+    </div>
+  </div>
       <div class="two-col-group">
         <div>
 
-            <form action="<%= params[:id] %>/edit">
-              <input type="submit" value="Edit My Info">
-            </form>
+          <form action="<%= params[:id] %>/edit">
+            <input type="submit" value="Edit My Info">
+          </form>
 
         </div>
         <div>
@@ -20,11 +31,13 @@
         </div>
       </div>
     </div>
-
+  </div>
     <div>
-      <h2>My Stats</h2>
+    <div class="profile-box">
+      <h1>The Stats</h1>
       <p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
     </div>
+  </div>
 
   </div>
 </div>
