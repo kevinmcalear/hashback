@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action(:load_user)
+  # before_action(:load_user)
   before_action(:load_story, { only: [:show, :edit, :update, :destroy] })
 
   def index

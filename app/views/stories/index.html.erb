@@ -1,27 +1,28 @@
 <h1>Story Index</h1>
+   
+   section> <section>
+      <ul id="da-thumbs" class="da-thumbs">      
+        <% @stories.each do |story| %>
+        <li>
+          <a href="<%= story_path(story) %>">
+            <img src="<%= story.photo_url %>" width="300px"/>
+            <div>
+              <p id="story-cover"><strong>#<%= story.hashtag %></strong></p>
+              <span><%= story.the_story %></span>
+            </div>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </section>
 
-<div id="pattern" class="pattern">
-    <ul class="insta_story_grid">
-      
-<% @stories.each do |story| %>
+    <script type="text/javascript">
+    $(function() {
 
-<li>
-  <a href="<%= story_path(story) %>"><img src="<%= story.photo_url %>" width="300px"/></a></li>
+      $(' #da-thumbs > li ').each( function() { $(this).hoverdir({
+        hoverDelay : 50,
+        inverse : true
+      }); } );
 
-  
-  <% end %>
-
-  </ul>
-  </div>
-  <!-- <h3>HashBack Tag:</h3>
-  <p>#<%= @stories.first.hashtag %></p>
-  <%= link_to "Edit", "" %>
-  
-  <%= form_tag "", method: "delete" do %>
-    <%= submit_tag("Delete") %> -->
-  <br/><br/>
-
-<% end %>
-
-<br/>
-<%= link_to "Add New story", new_story_path(@story) %>
+    });
+    </script>
