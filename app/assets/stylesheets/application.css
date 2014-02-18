@@ -533,3 +533,8 @@ outline: none;
   color: #4E3770;
   font-size: 20px;
 }
+
+#story_the_story {
+  width: 400px;
+  height: 200px;
+}

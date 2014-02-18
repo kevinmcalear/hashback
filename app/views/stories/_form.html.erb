@@ -1,19 +1,19 @@
+<div class="main-text">
 <%= form_for @story do |f| %>
+  <br>
+  <p><%= f.label :hashtag %></p>
+  <p><%= f.text_field :hashtag %></p>
   
-  <p>
-  <%= f.label :hashtag %>
-  <%= f.text_field :hashtag %>
-  </p>
 
-  <p>
-  <%= f.label :the_story %>
-  <%= f.text_area :the_story %>
-  </p>
+  <p><%= f.label :the_story %></p>
+  <p><%= f.text_area :the_story %></p>
 
-  <p>
-  <%= f.label :photo_url %>
-  <%= f.url_field :photo_url %>
-  </p>
+
+  <p><%= f.label :photo_url %></p>
+  <p><%= f.url_field :photo_url %></p>
+
 
   <%= f.submit %>
 <% end %>
+<br>
+</div>
