@@ -6,7 +6,8 @@
             <figcaption>
               <h2 class="photostack-title">#<%= @stories.first.hashtag %></h2>
               <div class="photostack-back">
-                <p><%= @stories.first.the_story %></p>
+                <a href="/stories/<%= @stories.first.id%>"><p><%= @stories.first.the_story %></p></a>
+              </div>
             </figcaption>
           </figure>
           <figure>
