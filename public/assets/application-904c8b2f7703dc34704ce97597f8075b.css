@@ -502,26 +502,44 @@ input[type="submit"] {
   height: 60px;
   text-transform: uppercase;
   margin-top: 40px;
+  border: none;
 }
 
 input[type="submit"]:hover, input[type="submit"]:active {
-  width: 260px;
-  height: 60px;
-  text-transform: uppercase;
-  margin-top: 40px;
   color: #fff;
   background: #6D6D6D;
-
 }
 
 
 input {
 width: 300px;
 font-size: 150%;
+outline: none;
 }
 
+.profile {
+  background: #B6B6B6;
+}
+.profile-box {
+  background: #fff;
+  margin: 5px;
+}
 
-@font-face {
+.profile-box  h1 {
+  color: #4E3770;
+  padding-top: 10px;
+}
+
+.profile-box  a {
+  color: #4E3770;
+  font-size: 20px;
+}
+
+#story_the_story {
+  width: 400px;
+  height: 200px;
+}
+/*@font-face {
 	font-family: 'icons';
 	src:url('assets/icons/icons.eot');
 	src:url('assets/icons/icons.eot?#iefix') format('embedded-opentype'),
@@ -530,7 +548,8 @@ font-size: 150%;
 		url('assets/icons/icons.svg#icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+}*/
+
 
 .photostack {
 	background: #ddd;
@@ -595,7 +614,7 @@ font-size: 150%;
 	top: 0;
 	left: 0;
 	background: #fff;
-	font-family: "Give You Glory", cursive;
+	font-family: 'Give You Glory';
 	color: #a7a0a2;
 	padding: 50px 40px;
 	text-align: left;
