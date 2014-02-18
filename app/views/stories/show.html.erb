@@ -1,33 +1,45 @@
-<div class="center_align"</div>
-<section class="description">
-<div id="pattern" class="pattern">
-  <div class="three-col-group">
-<div><p><strong>The Hashtag</strong></p>
-<p>#<%= @story.hashtag %></p>
-<p><img src="<%= @story.photo_url %>" width="300px"/></p></div>
-<div><p><strong>The Story</strong></p>
-<p><%= @story.the_story %></p></div>
-<div><p><strong>The Love</strong></p>
-<p>This story has been told <strong><%= @tag_count %></strong> times.</p></div>
-</div>
-</div>
-</section>
- 
+
+
+  <div id="pattern" class="pattern profile">
+    <div class="three-col-group">
+      <div>
+      <div class="profile-box">
+        <h1>The Hashtag</h1>
+        <p>#<%= @story.hashtag %></p>
+        <p><img src="<%= @story.photo_url %>" width="250px"/></p>
+        <br>
+      </div>
+    </div>
+    <div>
+      <div class="profile-box">
+        <h1>The Story</h1>
+        <p><%= @story.the_story %></p>
+      </div>
+    </div>
+    <div>
+      <div class="profile-box">
+        <h1>The Love</h1>
+        <p>This story has been told <strong><%= @tag_count %></strong> times.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
 <h1>Most Recent Instagram Pics</h1>
 
 <ul>
 
-<div id="pattern" class="pattern">
-  <ul class="insta_story_grid">
-<% @pics_info.each do |pic| %>
-  <li>
-  <a href="<%= pic["link"]%>" target="_blank"><img src="<%= pic["images"]["standard_resolution"]["url"] %>" width="300px"/></a>
-  <a href="http://instagram.com/<%= pic["user"]["username"]%>" target="_blank"><p>@<%= pic["user"]["username"]%></p></a>
-  <p><%= pic["likes"]["count"]%></p>
-  <p><%= truncate(pic["caption"]["text"], :length => 80)  unless pic["caption"].nil? %></p>
-  
-  </li>
-<% end %>
-</ul>
-</div>
-</div>
+  <div id="pattern" class="pattern">
+    <ul class="insta_story_grid">
+      <% @pics_info.each do |pic| %>
+      <li>
+        <a href="<%= pic["link"]%>" target="_blank"><img src="<%= pic["images"]["standard_resolution"]["url"] %>" width="300px"/></a>
+        <a href="http://instagram.com/<%= pic["user"]["username"]%>" target="_blank"><p>@<%= pic["user"]["username"]%></p></a>
+        <p><%= pic["likes"]["count"]%></p>
+        <p><%= truncate(pic["caption"]["text"], :length => 80)  unless pic["caption"].nil? %></p>
+
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
