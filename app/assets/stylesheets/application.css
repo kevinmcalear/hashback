@@ -424,17 +424,17 @@ width: 180px;
 }
 
 
-/*GROUPING */
+/*Three Column Group*/
 
-.col-group > div {
+.three-col-group > div {
   padding: 1em 1em 0;
 }
 
 @media screen and (min-width: 50em) {
-  .col-group {
+  .three-col-group {
     overflow: hidden;
   }
-  .col-group > div {
+  .three-col-group > div {
     float: left;
     width: 33.3333333%;
   }
@@ -474,4 +474,22 @@ padding-top: 5px;
 padding-bottom: 5px; 
 background: #898989; 
 color: white;
+}
+
+
+
+/*Two Coloumn Group*/
+.two-col-group > div {
+  padding: 1em;
+  margin-bottom: 1em;  
+}
+
+@media screen and (min-width: 44em) {
+  .two-col-group {
+    overflow: hidden;
+  }
+  .two-col-group > div {
+    float: left;
+    width: 50%;
+  }
 }

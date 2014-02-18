@@ -1,10 +1,36 @@
+<div id="pattern" class="pattern">
+    <div class="two-col-group">
+     
+      <div>
+        <h2>Welcome <%= @user.first_name %>!</h2>
+        <p><img src="<%= @user.profile_picture_url %>" width="300px;"/></p>
+        <p><%= @instagram["bio"] %></p>
+        <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+        <%= form_tag user_path(@user), method: "delete" do %>
+        <%= submit_tag("Delete My Account") %>
+        <% end %>
+      </div>
+
+      <div>
+        <h2>My Stats</h2>
+        <p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+<!-- 
 <h2>Welcome <%= @user.first_name %>!</h2>
 <p><img src="<%= @user.profile_picture_url %>"/></p>
 <p><%= @instagram["bio"] %></p>
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 
 
-
+ -->
 
 <h1>My Stories</h1>
 <div id="pattern" class="pattern">
@@ -31,7 +57,5 @@
  </ul>
   </div>
 
-<%= form_tag user_path(@user), method: "delete" do %>
-  <%= submit_tag("Delete My Account") %>
-<% end %>
+
 

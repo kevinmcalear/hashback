@@ -1,6 +1,6 @@
-<h1>Story Index</h1>
+
    
-   section> <section>
+<section>
       <ul id="da-thumbs" class="da-thumbs">      
         <% @stories.each do |story| %>
         <li>
@@ -20,7 +20,7 @@
     $(function() {
 
       $(' #da-thumbs > li ').each( function() { $(this).hoverdir({
-        hoverDelay : 50,
+        hoverDelay : 80,
         inverse : true
       }); } );
 

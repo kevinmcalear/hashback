@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  # before_action(:load_user)
+  before_action(:load_user, { only: [:new, :create, :edit, :update] })
   before_action(:load_story, { only: [:show, :edit, :update, :destroy] })
 
   def index
@@ -26,7 +26,6 @@ class StoriesController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
-    # binding.pry
     @pics = instagram_tag(@story.hashtag)
     @tag_count = instagram_tag_stat(@story.hashtag).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     @pics_info = instagram_photos(@story.hashtag)
@@ -34,6 +33,7 @@ class StoriesController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
