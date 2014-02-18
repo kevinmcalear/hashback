@@ -1,23 +1,33 @@
 <div id="pattern" class="pattern">
-    <div class="two-col-group">
-     
-      <div>
-        <h2>Welcome <%= @user.first_name %>!</h2>
-        <p><img src="<%= @user.profile_picture_url %>" width="300px;"/></p>
-        <p><%= @instagram["bio"] %></p>
-        <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
-        <%= form_tag user_path(@user), method: "delete" do %>
-        <%= submit_tag("Delete My Account") %>
-        <% end %>
-      </div>
+  <div class="two-col-group">
 
-      <div>
-        <h2>My Stats</h2>
-        <p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
-      </div>
+    <div>
+      <h2>Welcome <%= @user.first_name %>!</h2>
+      <p><img src="<%= @user.profile_picture_url %>" width="300px;"/></p>
+      <p><%= @instagram["bio"] %></p>
+      <div class="two-col-group">
+        <div>
 
+            <form action="<%= params[:id] %>/edit">
+              <input type="submit" value="Edit My Info">
+            </form>
+
+        </div>
+        <div>
+          <%= form_tag user_path(@user), method: "delete" do %>
+          <%= submit_tag("Delete My Account") %>
+          <% end %>
+        </div>
+      </div>
     </div>
+
+    <div>
+      <h2>My Stats</h2>
+      <p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+    </div>
+
   </div>
+</div>
 
 
 
@@ -30,32 +40,32 @@
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 
 
- -->
+-->
 
 <h1>My Stories</h1>
 <div id="pattern" class="pattern">
-    <ul class="list img-list">
+  <ul class="list img-list">
 
-<% @stories.each do |story| %>
-  <li>
-        <a href="<%= story_path(story) %>" class="inner">
-          <div class="li-img">
-            <img src="<%= story.photo_url %>" alt="Image Alt Text" />
-          </div>
-          <div class="li-text">
-            <h4 class="li-head">#<%= story.hashtag %></h4>
-            <p class="li-sub"><%= story.the_story %></p>
-            <p><%= link_to "Edit", edit_story_path(story) %></p>
-          </div>
-        </a>
-      </li>
-
-
+    <% @stories.each do |story| %>
+    <li>
+      <a href="<%= story_path(story) %>" class="inner">
+        <div class="li-img">
+          <img src="<%= story.photo_url %>" alt="Image Alt Text" />
+        </div>
+        <div class="li-text">
+          <h4 class="li-head">#<%= story.hashtag %></h4>
+          <p class="li-sub"><%= story.the_story %></p>
+          <p><%= link_to "Edit", edit_story_path(story) %></p>
+        </div>
+      </a>
+    </li>
 
 
-<% end %>
- </ul>
-  </div>
+
+
+    <% end %>
+  </ul>
+</div>
 
 
 

@@ -1,40 +1,44 @@
+
 <%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <br/>
+<div class="three-col-group">
+<div>  
+  <p><%= f.label :email %></p>
+  <p><%= f.email_field :email %></p>
+  
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <br/>
+  <p><%= f.label :password %></p>
+  <p><%= f.password_field :password %></p>
+  
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-  <br/>
+  <p><%= f.label :password_confirmation %></p>
+  <p><%= f.password_field :password_confirmation %></p>
+  </div>
+<div>
+  <p><%= f.label :first_name %></p>
+  <p><%= f.text_field :first_name %></p>
+  
 
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-  <br/>
+  <p><%= f.label :last_name %></p>
+  <p><%= f.text_field :last_name %></p>
+ 
 
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-  <br/>
+  
+  <p><%= f.label :instagram_username %></p>
+  <p><%= f.text_field :instagram_username %></p>
+  </div>
+  <div>
+  <p><%= f.label "Date of Birth" %></p>
+  <p><%= f.date_field :dob %></p>
+  
 
-  <%= f.label :instagram_username %>
-  <%= f.text_field :instagram_username %>
-  <br/>
-
-  <%= f.label "Date of Birth" %>
-  <%= f.date_field :dob %>
-  <br/>
-
-  <%= f.label :profile_picture_url %>
-  <%= f.text_field :profile_picture_url %>
-  <br/>
+  <p><%= f.label :profile_picture_url %></p>
+  <p><%= f.text_field :profile_picture_url %></p>
+  
 
 
-  <%= f.label :phone_number %>
-  <%= f.phone_field :phone_number %>
-  <br/>
-
+  <p><p><%= f.label :phone_number %></p>
+  <p><%= f.phone_field :phone_number %></p>
+  </div>
+</div>
   <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
 <% end %>

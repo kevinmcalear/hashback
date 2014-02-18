@@ -1,4 +1,4 @@
-<h2>Update user <%= @user.email %></h2>
+<h1>Feel Free To Change Your Info, <%= @user.first_name %>.</h1>
 
 <% unless @update_worked %>
   <div id="errors">
@@ -10,7 +10,10 @@
     </ul>
   </div>
 <% end %>
-
+<div class="main-text">
+  <br>
 <%= render "form" %>
-
-<p><%= link_to "Return to user home.", user_path(@user) %></p>
+<br>
+</div>
+<br>
+<p><%= link_to "GO BACK HOME", user_path(@user) %></p>

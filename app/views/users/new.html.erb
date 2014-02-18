@@ -1,4 +1,4 @@
-<h2>Create a new user</h2>
+<h1>Sign Up For HashBack</h1>
 
 <% unless @user.errors.messages.empty? %>
   <div id="errors">
@@ -11,6 +11,40 @@
   </div>
 <% end %>
 
-<div class="new_form">
-  <%= render "form" %>
+<div class="main-text">
+  <br>
+  <%= form_for @user do |f| %>
+<div class="three-col-group">
+<div> 
+  <p><%= f.label :email %></p>
+  <p><%= f.email_field :email %></p>
+  
+
+  <p><%= f.label :password %></p>
+  <p><%= f.password_field :password %></p>
+  </div>
+
+<div>
+  <p><%= f.label :password_confirmation %></p>
+  <p><%= f.password_field :password_confirmation %></p>
+  
+
+
+  <p><%= f.label :first_name %></p>
+  <p><%= f.text_field :first_name %></p>
+  </div>
+<div>
+  <p><%= f.label :last_name %></p>
+  <p><%= f.text_field :last_name %></p>
+  
+
+  
+  <p><%= f.label :instagram_username %></p>
+  <p><%= f.text_field :instagram_username %></p>
+</div>
+</div>
+  <%= f.submit @user.id.nil? ? "Join!" : "Save Changes" %>
+
+<% end %>
+<br>
 </div>
