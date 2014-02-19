@@ -40,7 +40,7 @@
       <li>
         <a href="<%= pic["link"]%>" target="_blank"><img src="<%= pic["images"]["standard_resolution"]["url"] %>" width="300px"/></a>
         <a href="http://instagram.com/<%= pic["user"]["username"]%>" target="_blank"><p>@<%= pic["user"]["username"]%></p></a>
-        <p><%= pic["likes"]["count"]%> Likes</p>
+        <p id="likes"><%= pic["likes"]["count"]%> Likes</p>
         <p><%= truncate(pic["caption"]["text"], :length => 80)  unless pic["caption"].nil? %></p>
 
       </li>

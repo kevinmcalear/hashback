@@ -289,6 +289,7 @@ width: 180px;
     }
     .insta_story_grid img {
       display: block;
+      border: 3px solid rgba(223, 223, 223, 0.19);
     }
     .insta_story_grid li:nth-child(odd) {
       clear: left;
@@ -353,6 +354,8 @@ width: 180px;
   display: table;
   border-collapse: collapse;
   width: 100%;
+  border: 6px solid rgba(172, 172, 172, 0.13);
+  background: #FFF;
 }
 .inner {
   display: table-row;
@@ -395,6 +398,8 @@ width: 180px;
     float: left;
     background: none;
     border: 0;
+    border: 6px solid rgba(172, 172, 172, 0.13);
+    background: #FFF;
   }
   .inner {
     display: block;
@@ -592,4 +597,28 @@ font-size: 18px;
 
 .story-box div {
   padding-bottom: 7px;
+}
+
+.insta_story_grid li {
+list-style: none;
+list-style-type: none;
+border: 6px solid rgba(172, 172, 172, 0.13);
+background: #FFF;
+}
+
+.insta_story_grid img:hover {
+  opacity: .7;
+}
+
+.insta_story_grid a {
+color:#A393BB;
+}
+
+.insta_story_grid a:hover, .insta_story_grid a:active {
+color:#ddd;
+}
+
+
+#likes {
+  color: #FFCDD6;
 }
