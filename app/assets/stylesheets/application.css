@@ -285,6 +285,7 @@ width: 180px;
       float: left;
       width: 50%;
       padding: 0.25em;
+      word-wrap: break-word;
     }
     .insta_story_grid img {
       display: block;
