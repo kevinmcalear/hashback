@@ -9,11 +9,13 @@ Hashback is a platform that allows **#hashtags** that give back. You submit a st
 ### All Technologies Used On This App:
 
 * Gems Used:
-	* Submit an ERD (data model).
+	* [bcrypt-ruby](http://bcrypt-ruby.rubyforge.org/)
+	* [httparty](https://github.com/jnunemaker/httparty)
 * APIs Used:
-	* Build an app that performs CRUD operations on a minimum of 3-models.
+	* [Instagram's API](http://instagram.com/developer/api-console/)
 * Libraries Used:
-	* Build an app that implements authentication & authorization.
+	* [Mary Lou's Scattered Polariods Gallery](http://tympanus.net/codrops/author/crnacura/)
+	* [Help From Brad Frost's Responsive Patterns](http://bradfrost.github.io/this-is-responsive/patterns.html)
 
 
 ### [Find My User Stories & ERD](https://www.pivotaltracker.com/s/projects/1015696)

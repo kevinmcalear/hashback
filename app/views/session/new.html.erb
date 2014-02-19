@@ -1,30 +1,30 @@
 <% unless @message.nil? %>
-  <div id="errors">
-    <h3>Errors!</h3>
-    <ul>
-      <li><em><%= @message %></em></li>
-    </ul>
-  </div>
+<div id="errors">
+  <h3>Errors!</h3>
+  <ul>
+    <li><em><%= @message %></em></li>
+  </ul>
+</div>
 <% end %>
 
 <h1>Welcome Back</h1>
 <div class="main-text">
-<br>
+  <br>
   <%= form_tag "/session" do %>
-    <p>
+  <p>
     <%= label_tag :email %>
   </p>
-    <p>
+  <p>
     <%= email_field_tag :email %>
   </p>
   <p>
     <%= label_tag :password %>
-    </p>
-      <p>
+  </p>
+  <p>
     <%= password_field_tag :password %>
-    </p>
-    <%= submit_tag "Log in" %>
+  </p>
+  <%= submit_tag "Log in" %>
   <% end %>
-<br>
+  <br>
 </div>
 </section>
