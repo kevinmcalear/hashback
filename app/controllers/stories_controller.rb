@@ -29,7 +29,7 @@ def show
   @pics = instagram_tag(@story.hashtag)
   @tag_count = instagram_tag_stat(@story.hashtag).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
   @pics_info = instagram_photos(@story.hashtag)
-  @instagram = instagram_info(@user.instagram_username)
+  @instagram = instagram_info(User.find(@story.user_id).instagram_username)
 
 end
 
