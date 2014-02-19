@@ -18,5 +18,8 @@ Hashback is a platform that allows **#hashtags** that give back. You submit a st
 	* [Help From Brad Frost's Responsive Patterns](http://bradfrost.github.io/this-is-responsive/patterns.html)
 
 
-### [Find My User Stories & ERD](https://www.pivotaltracker.com/s/projects/1015696)
+### [See My User Stories](https://www.pivotaltracker.com/s/projects/1015696)
+
+### [Check Out Wireframes & ERD](https://gomockingbird.com/mockingbird/#h37co1l/KS5LHx)
+
 
