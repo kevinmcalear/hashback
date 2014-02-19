@@ -16,5 +16,5 @@ Hashback is a platform that allows **#hashtags** that give back. You submit a st
 	* Build an app that implements authentication & authorization.
 
 
-### [Find My User Stories & ERD](http://https://www.pivotaltracker.com/s/projects/1015696)
+### [Find My User Stories & ERD](https://www.pivotaltracker.com/s/projects/1015696)
 
