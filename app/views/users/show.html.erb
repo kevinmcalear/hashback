@@ -1,5 +1,6 @@
  <div id="pattern" class="pattern">
   <div class="two-col-group profile">
+    
     <div>
       <div class="profile-box">
         <h1><%= @user.first_name %>'s Hashbacks</h1>
@@ -9,20 +10,22 @@
             <p><img src="<%= @instagram["profile_picture"] %>" width="200px;"/></p>
             <p><a href="http://instagram.com/<%= @instagram["username"] %>" target="_blank">@<%= @instagram["username"] %></a></p>
           </div>
+
           <div>
             <h2><strong>About</strong></h2>
             <br>
             <p><%= @instagram["bio"] %></p>
           </div>
         </div>
+       
         <div class="two-col-group">
+         
           <div>
-
             <form action="<%= params[:id] %>/edit">
               <input type="submit" value="Edit My Info">
             </form>
-
           </div>
+
           <div>
             <%= form_tag user_path(@user), method: "delete" do %>
             <%= submit_tag("Delete My Account") %>
@@ -31,6 +34,7 @@
         </div>
       </div>
     </div>
+    
     <div>
       <div id="profile-stats" class="profile-box">
         <h1>The Stats</h1>
@@ -43,39 +47,29 @@
 </div>
 
 
-
-
-
-
-<!-- <h2>Welcome <%= @user.first_name %>!</h2>
-<p><img src="<%= @user.profile_picture_url %>"/></p>
-<p><%= @instagram["bio"] %></p>
-<p><%= link_to "Edit My Info", edit_user_path(@user) %></p> -->
-
-
-
-
 <h1>My Stories</h1>
 <div id="pattern" class="pattern">
+  
+
   <ul class="list img-list">
 
     <% @stories.each do |story| %>
+    
     <li>
       <a href="<%= story_path(story) %>" class="inner">
+        
         <div class="li-img">
           <img src="<%= story.photo_url %>" alt="Image Alt Text" />
         </div>
+
         <div class="li-text">
           <h4 class="li-head">#<%= story.hashtag %></h4>
           <p class="li-sub"><%= story.the_story %></p>
           <p id="edit-link"><strong><%= link_to "EDIT STORY", edit_story_path(story) %></strong></p>
         </div>
+
       </a>
     </li>
-
-
-
-
     <% end %>
   </ul>
 </div>
