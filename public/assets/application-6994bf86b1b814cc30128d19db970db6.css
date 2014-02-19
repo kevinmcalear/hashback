@@ -523,6 +523,7 @@ outline: none;
 .profile-box {
   background: #fff;
   margin: 5px;
+  height: 520px;
 }
 
 .profile-box  h1 {
@@ -538,6 +539,55 @@ outline: none;
 #story_the_story {
   width: 400px;
   height: 200px;
+}
+
+
+#hashtag-icon {
+  font-size: 90px;
+  color: #777;
+}
+
+#edit-link a {
+  color: #4E3770;
+  font-size: 20px;
+}
+
+#edit-link a:hover, #edit-link a:active {
+  color: #fff;
+}
+
+
+
+.story-box {
+background: #FFF;
+margin: 5px;
+height: 390px;
+margin-bottom: 30px;
+font-size: 18px;
+}
+
+.story-box  h1 {
+  color: #4E3770;
+  padding-top: 10px;
+}
+
+#the-story p {
+  font-size: 20px;
+}
+
+#the-love p {
+  padding-top: 60px;
+  font-size: 40px;
+}
+
+
+#story-stats {
+  color: #535252;
+}
+
+#profile-stats p {
+  padding-top: 40px;
+  font-size: 50px;
 }
 /*@font-face {
 	font-family: 'icons';
@@ -614,7 +664,7 @@ outline: none;
 	top: 0;
 	left: 0;
 	background: #fff;
-	font-family: 'Give You Glory', cursive;
+	font-family: 'Lato';
 	color: #a7a0a2;
 	padding: 50px 40px;
 	text-align: left;

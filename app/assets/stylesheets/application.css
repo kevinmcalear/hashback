@@ -522,6 +522,7 @@ outline: none;
 .profile-box {
   background: #fff;
   margin: 5px;
+  height: 520px;
 }
 
 .profile-box  h1 {
@@ -581,4 +582,9 @@ font-size: 18px;
 
 #story-stats {
   color: #535252;
+}
+
+#profile-stats p {
+  padding-top: 40px;
+  font-size: 50px;
 }

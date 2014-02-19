@@ -20,7 +20,10 @@ class UsersController < ApplicationController
 
   def show
     @stories = @user.stories.all
+    hash_count = []
+    @stories.each {|story| hash_count << instagram_tag_stat(story.hashtag).to_i}
     @instagram = instagram_info(@user.instagram_username)
+    @total_hash_count = hash_count.reduce(:+).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
   end
 
   def edit
@@ -60,4 +63,9 @@ class UsersController < ApplicationController
     return profile_info
   end
 
+  def instagram_tag_stat(tag)
+    tag_stats = HTTParty.get("https://api.instagram.com/v1/tags/search?q=#{tag}&client_id=8a67c3b89c51484ea8f6ac75de2bdc01")
+    tag_count = tag_stats["data"][0]["media_count"]
+    return tag_count
+  end
 end

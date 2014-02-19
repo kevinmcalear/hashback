@@ -32,9 +32,10 @@
       </div>
     </div>
     <div>
-      <div class="profile-box">
+      <div id="profile-stats" class="profile-box">
         <h1>The Stats</h1>
-        <p>Sed sit amet molestie diam. Etiam adipiscing dictum eros, vitae feugiat augue convallis sit amet. Nunc quis massa non dolor dictum condimentum.</p>
+        <p>You have told <strong id="story-stats"><%= @stories.count %></strong> stories.</p>
+        <p>Your stories have been told <strong id="story-stats"><%= @total_hash_count %></strong> times.</p>
       </div>
     </div>
 
