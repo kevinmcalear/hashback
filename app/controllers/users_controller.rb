@@ -58,13 +58,13 @@ class UsersController < ApplicationController
   end
 
   def instagram_info(user_name)
-    profile = HTTParty.get( "https://api.instagram.com/v1/users/search?q=#{user_name}&client_id=8a67c3b89c51484ea8f6ac75de2bdc01")
+    profile = HTTParty.get( "https://api.instagram.com/v1/users/search?q=#{user_name}&client_id=#{INSTAGRAM_CLIENT_ID}")
     profile_info = profile["data"][0]
     return profile_info
   end
 
   def instagram_tag_stat(tag)
-    tag_stats = HTTParty.get("https://api.instagram.com/v1/tags/search?q=#{tag}&client_id=8a67c3b89c51484ea8f6ac75de2bdc01")
+    tag_stats = HTTParty.get("https://api.instagram.com/v1/tags/search?q=#{tag}&client_id=#{INSTAGRAM_CLIENT_ID}")
     tag_count = tag_stats["data"][0]["media_count"]
     return tag_count
   end

@@ -1,28 +1,20 @@
-== README
+# HashBack
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### GA WDI NYC Jan 14, Project 1
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Hashback is a platform that allows **#hashtags** that give back. You submit a story about someone or something that needs love, include a picture, and add a custom hashtag to use and people all over Instagram can help spread love to that person, non-profit, or cause.
+
+
+### All Technologies Used On This App:
+
+* Gems Used:
+	* Submit an ERD (data model).
+* APIs Used:
+	* Build an app that performs CRUD operations on a minimum of 3-models.
+* Libraries Used:
+	* Build an app that implements authentication & authorization.
+
+
+### [Find My User Stories & ERD](http://https://www.pivotaltracker.com/s/projects/1015696)
+
