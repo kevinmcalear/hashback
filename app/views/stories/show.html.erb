@@ -21,6 +21,10 @@
       <div class="story-box" id="the-love">
         <h1>The Love</h1>
         <p>This story has been told <strong id="story-stats"><%= @tag_count %></strong> times.</p>
+        <div>
+          HashBack Told By: 
+        </div>
+        <a href="/users/<%= @user.id %>"><img src="<%= @instagram["profile_picture"] %>" width="60px;"/></a>
       </div>
     </div>
     </div>

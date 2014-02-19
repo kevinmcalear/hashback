@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action(:load_user, { only: [:new, :create, :edit, :update] })
+  before_action(:load_user, { only: [:new, :create, :edit, :update, :show] })
   before_action(:load_story, { only: [:show, :edit, :update, :destroy] })
 
   def index
@@ -29,6 +29,7 @@ class StoriesController < ApplicationController
     @pics = instagram_tag(@story.hashtag)
     @tag_count = instagram_tag_stat(@story.hashtag).to_s.reverse.gsub(/...(?=.)/,'\&,').reverse
     @pics_info = instagram_photos(@story.hashtag)
+    @instagram = instagram_info(@user.instagram_username)
 
   end
 
@@ -60,6 +61,12 @@ class StoriesController < ApplicationController
 
   def story_params
     params.require(:story).permit(:hashtag, :the_story, :photo_url)
+  end
+
+  def instagram_info(user_name)
+    profile = HTTParty.get( "https://api.instagram.com/v1/users/search?q=#{user_name}&client_id=#{INSTAGRAM_CLIENT_ID}")
+    profile_info = profile["data"][0]
+    return profile_info
   end
 
 
