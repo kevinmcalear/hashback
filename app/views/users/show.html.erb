@@ -1,10 +1,9 @@
  <div id="pattern" class="pattern">
   <div class="two-col-group profile">
-
     <div>
       <div class="profile-box">
         <h1><%= @user.first_name %>'s Hashbacks</h1>
-        
+
         <div class="two-col-group">
           <div>
             <p><img src="<%= @instagram["profile_picture"] %>" width="200px;"/></p>
@@ -46,11 +45,11 @@
 
 
 
-<!-- 
-<h2>Welcome <%= @user.first_name %>!</h2>
+
+<!-- <h2>Welcome <%= @user.first_name %>!</h2>
 <p><img src="<%= @user.profile_picture_url %>"/></p>
 <p><%= @instagram["bio"] %></p>
-<p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+<p><%= link_to "Edit My Info", edit_user_path(@user) %></p> -->
 
 
 
@@ -68,7 +67,7 @@
         <div class="li-text">
           <h4 class="li-head">#<%= story.hashtag %></h4>
           <p class="li-sub"><%= story.the_story %></p>
-          <p><%= link_to "Edit", edit_story_path(story) %></p>
+          <p id="edit-link"><strong><%= link_to "EDIT STORY", edit_story_path(story) %></strong></p>
         </div>
       </a>
     </li>
@@ -82,4 +81,3 @@
 
 
 
- -->

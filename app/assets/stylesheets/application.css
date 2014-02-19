@@ -538,3 +538,47 @@ outline: none;
   width: 400px;
   height: 200px;
 }
+
+
+#hashtag-icon {
+  font-size: 90px;
+  color: #777;
+}
+
+#edit-link a {
+  color: #4E3770;
+  font-size: 20px;
+}
+
+#edit-link a:hover, #edit-link a:active {
+  color: #fff;
+}
+
+
+
+.story-box {
+background: #FFF;
+margin: 5px;
+height: 390px;
+margin-bottom: 30px;
+font-size: 18px;
+}
+
+.story-box  h1 {
+  color: #4E3770;
+  padding-top: 10px;
+}
+
+#the-story p {
+  font-size: 20px;
+}
+
+#the-love p {
+  padding-top: 60px;
+  font-size: 40px;
+}
+
+
+#story-stats {
+  color: #535252;
+}

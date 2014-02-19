@@ -3,23 +3,24 @@
   <div id="pattern" class="pattern profile">
     <div class="three-col-group">
       <div>
-      <div class="profile-box">
+      <div class="story-box">
         <h1>The Hashtag</h1>
-        <p>#<%= @story.hashtag %></p>
+        
         <p><img src="<%= @story.photo_url %>" width="250px"/></p>
+        <p>#<%= @story.hashtag %></p>
         <br>
       </div>
     </div>
     <div>
-      <div class="profile-box">
+      <div class="story-box"  id="the-story">
         <h1>The Story</h1>
         <p><%= @story.the_story %></p>
       </div>
     </div>
     <div>
-      <div class="profile-box">
+      <div class="story-box" id="the-love">
         <h1>The Love</h1>
-        <p>This story has been told <strong><%= @tag_count %></strong> times.</p>
+        <p>This story has been told <strong id="story-stats"><%= @tag_count %></strong> times.</p>
       </div>
     </div>
     </div>
@@ -35,7 +36,7 @@
       <li>
         <a href="<%= pic["link"]%>" target="_blank"><img src="<%= pic["images"]["standard_resolution"]["url"] %>" width="300px"/></a>
         <a href="http://instagram.com/<%= pic["user"]["username"]%>" target="_blank"><p>@<%= pic["user"]["username"]%></p></a>
-        <p><%= pic["likes"]["count"]%></p>
+        <p><%= pic["likes"]["count"]%> Likes</p>
         <p><%= truncate(pic["caption"]["text"], :length => 80)  unless pic["caption"].nil? %></p>
 
       </li>
